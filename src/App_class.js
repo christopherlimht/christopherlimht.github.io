@@ -1,27 +1,22 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { withStyles } from '@material-ui/core/styles';
+import Header from './Components/Header/Header.js';
+import MainContentA from './Components/MainContentA/MainContentA.js';
+import MainContentB from './Components/MainContentB/MainContentB.js';
+import Footer from './Components/Footer/Footer.js'
 
 
-const useStyles = theme => ({
+const useStyles = (theme) => ({
     icon: {
       marginRight: theme.spacing(2),
     },
-    heroContent: {
+    mainContentA: {
       backgroundColor: theme.palette.background.paper,
       padding: theme.spacing(8, 0, 6),
+      height: '100vh',
+      alignItems: 'center',
+      display:'flex'
     },
     heroButtons: {
       marginTop: theme.spacing(4),
@@ -43,7 +38,7 @@ const useStyles = theme => ({
     },
     footer: {
       backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6),
+      padding: theme.spacing(2),
     },
   });
 
@@ -51,25 +46,45 @@ class App extends React.Component{
 
     constructor(props){
         super(props);
+        this.MainContentA = React.createRef();
+        this.MainContentB = React.createRef();
+        this.Footer = React.createRef();
+        this.scrollToContent = this.scrollToContent.bind(this);
+    }
+    scrollToContent(content) {
+      switch(content) {
+        case 1:
+          this.MainContentA.current.scrollIntoView({behavior: 'smooth'});
+          break;
+        case 2:
+          this.MainContentB.current.scrollIntoView({behavior: 'smooth'});
+          break;
+        case 3:
+          this.Footer.current.scrollIntoView({behavior: 'smooth'});
+          break;
+      }
     }
     render(){
         const {classes} = this.props;
         return (
-            <React.Fragment>
-                <CssBaseline />
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <CameraIcon className={classes.icon} />
-                        <Typography variant="h6" color="inherit" noWrap>
-                            Album layout navbar
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-            </React.Fragment>
+          <React.Fragment>
+            <CssBaseline />
+            <Header icon={classes.icon}/>
+            <main>
+              {/* Hero unit */}
+              <div ref={this.MainContentA}/>
+              <MainContentA classes={classes} handleClick={this.scrollToContent} />
+              <div ref={this.MainContentB}/>
+              <MainContentB classes={classes}/>
+              
+              
+            </main>
+            {/* Footer */}
+            <div ref={this.Footer}/>
+            <Footer classes={classes}/>
+        </React.Fragment>
         )
     }
 }
-
-//<App classes={useStyles=withStyles()} />
 
 export default withStyles(useStyles)(App);

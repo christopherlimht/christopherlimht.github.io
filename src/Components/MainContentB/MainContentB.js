@@ -8,8 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
-//const cards = [1, 2, 3];
+//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
+const cards = [1, 2, 3];
+//const section2 = React.forwardRef((props,ref)=>MainContentB(props,ref))
 function MainContentB(props){
     return(
         <div style={{minHeight:'100vh',display:'flex',alignItems:'center'}}>
@@ -48,5 +49,5 @@ function MainContentB(props){
         </div>
     )
 }
-
 export default MainContentB;
+//export default section2;

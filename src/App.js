@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Header from './Components/Header/Header.js';
 import MainContentA from './Components/MainContentA/MainContentA.js';
 import MainContentB from './Components/MainContentB/MainContentB.js';
