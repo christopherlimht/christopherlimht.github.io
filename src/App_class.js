@@ -2,19 +2,25 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
 import Header from './Components/Header/Header.js';
-import MainContentA from './Components/MainContentA/MainContentA.js';
-import MainContentB from './Components/MainContentB/MainContentB.js';
+import FrontSegment from './Components/FrontSegment/FrontSegment.js';
+import ProjectSegment from './Components/ProjectSegment/ProjectSegment.js';
 import Footer from './Components/Footer/Footer.js'
-
+import ContactSegment from './Components/ContactSegment/ContactSegment.js';
 
 const useStyles = (theme) => ({
     icon: {
       marginRight: theme.spacing(2),
     },
-    mainContentA: {
+    FrontSegment: {
       backgroundColor: theme.palette.background.paper,
       padding: theme.spacing(8, 0, 6),
       height: '100vh',
+      alignItems: 'center',
+      display:'flex'
+    },
+    ContactSegment:{
+      backgroundColor: '#f44336',
+      minHeight: 'calc(100vh - 64px)',
       alignItems: 'center',
       display:'flex'
     },
@@ -46,21 +52,21 @@ class App extends React.Component{
 
     constructor(props){
         super(props);
-        this.MainContentA = React.createRef();
-        this.MainContentB = React.createRef();
-        this.Footer = React.createRef();
+        this.FrontSegment = React.createRef();
+        this.ProjectSegment = React.createRef();
+        this.ContactSegment = React.createRef();
         this.scrollToContent = this.scrollToContent.bind(this);
     }
     scrollToContent(content) {
       switch(content) {
         case 1:
-          this.MainContentA.current.scrollIntoView({behavior: 'smooth'});
+          this.FrontSegment.current.scrollIntoView({behavior: 'smooth'});
           break;
         case 2:
-          this.MainContentB.current.scrollIntoView({behavior: 'smooth'});
+          this.ProjectSegment.current.scrollIntoView({behavior: 'smooth'});
           break;
         case 3:
-          this.Footer.current.scrollIntoView({behavior: 'smooth'});
+          this.ContactSegment.current.scrollIntoView({behavior: 'smooth'});
           break;
       }
     }
@@ -72,15 +78,14 @@ class App extends React.Component{
             <Header icon={classes.icon}/>
             <main>
               {/* Hero unit */}
-              <div ref={this.MainContentA}/>
-              <MainContentA classes={classes} handleClick={this.scrollToContent} />
-              <div ref={this.MainContentB}/>
-              <MainContentB classes={classes}/>
-              
-              
+              <div ref={this.FrontSegment}/>
+              <FrontSegment classes={classes} handleClick={this.scrollToContent} />
+              <div ref={this.ProjectSegment}/>
+              <ProjectSegment classes={classes}/>
             </main>
             {/* Footer */}
-            <div ref={this.Footer}/>
+            <div ref={this.ContactSegment}/>
+            <ContactSegment classes={classes}/>
             <Footer classes={classes}/>
         </React.Fragment>
         )

@@ -10,8 +10,7 @@ import Container from '@material-ui/core/Container';
 
 //const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
 const cards = [1, 2, 3];
-//const section2 = React.forwardRef((props,ref)=>MainContentB(props,ref))
-function MainContentB(props){
+function ProjectSegment(props){
     return(
         <div style={{minHeight:'100vh',display:'flex',alignItems:'center'}}>
             <Container className={props.classes.cardGrid} maxWidth="md">
@@ -49,5 +48,4 @@ function MainContentB(props){
         </div>
     )
 }
-export default MainContentB;
-//export default section2;
+export default ProjectSegment;

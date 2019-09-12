@@ -3,12 +3,12 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import "./MainContentA.css"
+import "./FrontSegment.css"
 
-function MainContentA(props){
+function FrontSegment(props){
     return(
-        <div className={props.classes.mainContentA}>
-            <Container maxWidth="sm" className='MainContentA'>
+        <div className={props.classes.FrontSegment}>
+            <Container maxWidth="sm" className='FrontSegment'>
                 <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Album layout
                 </Typography>
@@ -36,4 +36,4 @@ function MainContentA(props){
     )
 }
 
-export default MainContentA;
+export default FrontSegment;
