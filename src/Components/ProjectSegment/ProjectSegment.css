@@ -6,7 +6,7 @@
 .ProjectSegment{
     min-Height:100vh;
     display:flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction:column;
 }
 .Title{

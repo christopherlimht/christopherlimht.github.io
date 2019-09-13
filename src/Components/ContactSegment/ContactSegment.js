@@ -11,9 +11,15 @@ import Container from '@material-ui/core/Container';
 function ContactSegment(props){
     return(
         <div className={props.classes.ContactSegment}>
-        <Container maxWidth="sm" className='ContactSegment'>
-        asd
-        </Container>
+        <Grid container spacing={0} className='ProjectSegment'>
+            <Grid item className='TitleContainer'>
+                <Container maxWidth='false'>
+                    <Typography className='Title' variant="h4" color="inherit" noWrap>
+                        Profile
+                    </Typography>
+                </Container>
+            </Grid>
+        </Grid> 
         </div>
     )
 }

@@ -13,12 +13,11 @@ import { Divider } from '@material-ui/core';
 const cards = [1, 2, 3,4];
 function ProjectSegment(props){
     return(
-        
         <Grid container spacing={0} className='ProjectSegment'>
             <Grid item className='TitleContainer'>
                 <Container maxWidth='false'>
                     <Typography className='Title' variant="h4" color="inherit" noWrap>
-                        Project
+                        Projects
                     </Typography>
                 </Container>
             </Grid>
@@ -56,8 +55,7 @@ function ProjectSegment(props){
                     </Grid>
                 </Container>
             </Grid>
-        </Grid>
-        
+        </Grid> 
     )
 }
 export default ProjectSegment;

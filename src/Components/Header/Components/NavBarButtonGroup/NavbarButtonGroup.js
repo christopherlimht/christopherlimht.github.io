@@ -22,7 +22,7 @@ export default function NavbarButtonGroup(props){
             </Button>
             <Button className='NavBarButton' variant="text" color="inherit" onClick={()=>props.handleClick(3)}>
                 <Typography variant="h6" color="inherit" noWrap>
-                    Contact
+                    Profile
                 </Typography>
             </Button>
             </div>

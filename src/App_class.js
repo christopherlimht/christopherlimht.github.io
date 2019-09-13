@@ -19,7 +19,7 @@ const useStyles = (theme) => ({
       display:'flex'
     },
     ContactSegment:{
-      backgroundColor: '#f44336',
+      backgroundColor: theme.palette.background.paper,
       minHeight: 'calc(100vh - 64px)',
       alignItems: 'center',
       display:'flex'
@@ -43,7 +43,6 @@ const useStyles = (theme) => ({
       flexGrow: 1,
     },
     footer: {
-      backgroundColor: theme.palette.background.paper,
       padding: theme.spacing(2),
     },
   });
