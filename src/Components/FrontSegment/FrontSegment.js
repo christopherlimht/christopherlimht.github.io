@@ -18,18 +18,18 @@ function FrontSegment(props){
                 entirely.
                 </Typography>
                 <div className={props.classes.heroButtons}>
-                <Grid container spacing={2} justify="center">
-                    <Grid item>
-                    <Button variant="contained" color="primary" onClick={()=>props.handleClick(2)}>
-                        Main call to action
-                    </Button>
+                    <Grid container spacing={2} justify="center">
+                        <Grid item>
+                        <Button variant="contained" color="primary" onClick={()=>props.handleClick(2)}>
+                            Main call to action
+                        </Button>
+                        </Grid>
+                        <Grid item>
+                        <Button variant="outlined" color="primary" onClick={()=>props.handleClick(3)}>
+                            Secondary action
+                        </Button>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                    <Button variant="outlined" color="primary" onClick={()=>props.handleClick(3)}>
-                        Secondary action
-                    </Button>
-                    </Grid>
-                </Grid>
                 </div>
             </Container>
         </div>
