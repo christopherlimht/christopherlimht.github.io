@@ -6,6 +6,7 @@ import FrontSegment from './Components/FrontSegment/FrontSegment.js';
 import ProjectSegment from './Components/ProjectSegment/ProjectSegment.js';
 import Footer from './Components/Footer/Footer.js'
 import ContactSegment from './Components/ContactSegment/ContactSegment.js';
+import Scrollchor from 'react-scrollchor';
 
 const useStyles = (theme) => ({
     icon: {
@@ -56,6 +57,7 @@ class App extends React.Component{
         this.ContactSegment = React.createRef();
         this.scrollToContent = this.scrollToContent.bind(this);
     }
+    
     scrollToContent(content) {
       switch(content) {
         case 1:
@@ -80,7 +82,7 @@ class App extends React.Component{
             <Header icon={classes.icon} handleDesktopClick={this.scrollToContent}/>
             <main>
               {/* Hero unit */}
-              <div ref={this.FrontSegment}/>
+              <div ref={this.FrontSegment} id='frontsegment'/>
               <FrontSegment classes={classes} handleClick={this.scrollToContent} />
               <div ref={this.ProjectSegment}/>
               <ProjectSegment classes={classes}/>

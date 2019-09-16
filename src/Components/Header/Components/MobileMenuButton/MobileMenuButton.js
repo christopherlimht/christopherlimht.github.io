@@ -12,8 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Scrollchor from 'react-scrollchor';
 const useStyles = makeStyles({
     list: {
       width: 250,
@@ -49,10 +48,12 @@ export default function MobileMenuButton(props){
         >
           <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            <Scrollchor to="#frontsegment" className="nav-link">
               <ListItem button key={text}  onClick={(closeDrawer('left', true))}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
+            </Scrollchor>
             ))}
           </List>
           <Divider />

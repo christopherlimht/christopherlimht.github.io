@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import "./NavbarButtonGroup.css";
 import Button from '@material-ui/core/Button';
 import { Hidden } from '@material-ui/core';
-
+import Scrollchor from 'react-scrollchor';
 export default function NavbarButtonGroup(props){
     return (
         <React.Fragment>
