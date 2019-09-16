@@ -13,7 +13,7 @@ function ContactSegment(props){
         <div className={props.classes.ContactSegment}>
         <Grid container spacing={0} className='ProjectSegment'>
             <Grid item className='TitleContainer'>
-                <Container maxWidth='false'>
+                <Container maxWidth={false}>
                     <Typography className='Title' variant="h4" color="inherit" noWrap>
                         Profile
                     </Typography>

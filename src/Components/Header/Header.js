@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import "./Header.css";
 import NavbarButtonGroup from './Components/NavBarButtonGroup/NavbarButtonGroup.js'
 import { makeStyles } from '@material-ui/core/styles';
-import MobileMenuButton from './Components/MobileMenuButton/MobileMenuButton';
+import MobileMenuButton from './Components/MobileMenuButton/MobileMenuButton.js';
 
 const useStyles = makeStyles({
     Navbar: {

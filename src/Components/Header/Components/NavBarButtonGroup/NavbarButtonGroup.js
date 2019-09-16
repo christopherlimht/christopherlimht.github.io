@@ -1,7 +1,4 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import "./NavbarButtonGroup.css";
 import Button from '@material-ui/core/Button';

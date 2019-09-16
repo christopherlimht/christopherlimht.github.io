@@ -8,14 +8,13 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import './ProjectSegment.css';
-import { Divider } from '@material-ui/core';
 //const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
 const cards = [1, 2, 3,4];
 function ProjectSegment(props){
     return(
         <Grid container spacing={0} className='ProjectSegment'>
             <Grid item className='TitleContainer'>
-                <Container maxWidth='false'>
+                <Container maxWidth={false}>
                     <Typography className='Title' variant="h4" color="inherit" noWrap>
                         Projects
                     </Typography>

@@ -60,12 +60,15 @@ class App extends React.Component{
       switch(content) {
         case 1:
           this.FrontSegment.current.scrollIntoView({behavior: 'smooth'});
+          console.log("Navigating to Home..")
           break;
         case 2:
           this.ProjectSegment.current.scrollIntoView({behavior: 'smooth'});
+          console.log("Navigating to Project..")
           break;
         case 3:
           this.ContactSegment.current.scrollIntoView({behavior: 'smooth'});
+          console.log("Navigating to Profile..")
           break;
       }
     }
