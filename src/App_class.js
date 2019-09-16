@@ -74,7 +74,7 @@ class App extends React.Component{
         return (
           <React.Fragment>
             <CssBaseline />
-            <Header icon={classes.icon} handleClick={this.scrollToContent}/>
+            <Header icon={classes.icon} handleDesktopClick={this.scrollToContent}/>
             <main>
               {/* Hero unit */}
               <div ref={this.FrontSegment}/>

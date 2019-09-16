@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import "./Header.css";
 import NavbarButtonGroup from './Components/NavBarButtonGroup/NavbarButtonGroup.js'
 import { makeStyles } from '@material-ui/core/styles';
+import MobileMenuButton from './Components/MobileMenuButton/MobileMenuButton';
 
 const useStyles = makeStyles({
     Navbar: {
@@ -26,7 +27,8 @@ export default function Header(props){
                         Name
                     </Typography>
                     </div>
-                    <NavbarButtonGroup handleClick={props.handleClick}/>    
+                    <NavbarButtonGroup handleClick={props.handleDesktopClick}/>
+                    <MobileMenuButton handleClick={props.handleDesktopClick}/>
                 </Toolbar>
             </AppBar>
     );
