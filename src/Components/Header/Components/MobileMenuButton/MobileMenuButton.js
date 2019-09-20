@@ -39,6 +39,11 @@ export default function MobileMenuButton(props){
         }
         setState({ ...state, [side]: open });
     };
+    const sidebarItem = [
+      {id:"#frontsegment",name:"Home"},
+      {id:"#project",name:"Project"},
+      {id:"#profile",name:"Profile"}
+    ]
     const sideList = side => (
         <div
           className={classes.list}
@@ -47,11 +52,11 @@ export default function MobileMenuButton(props){
           onKeyDown={toggleDrawer(side, false)}
         >
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <Scrollchor to="#frontsegment" className="nav-link">
-              <ListItem button key={text}  onClick={(closeDrawer('left', true))}>
+            {sidebarItem.map((text, index) => (
+            <Scrollchor to={text.id}>
+              <ListItem button key={index}  onClick={(closeDrawer('left', true))}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text.name} />
               </ListItem>
             </Scrollchor>
             ))}

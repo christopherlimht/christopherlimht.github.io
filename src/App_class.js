@@ -6,7 +6,6 @@ import FrontSegment from './Components/FrontSegment/FrontSegment.js';
 import ProjectSegment from './Components/ProjectSegment/ProjectSegment.js';
 import Footer from './Components/Footer/Footer.js'
 import ContactSegment from './Components/ContactSegment/ContactSegment.js';
-import Scrollchor from 'react-scrollchor';
 
 const useStyles = (theme) => ({
     icon: {
@@ -84,11 +83,11 @@ class App extends React.Component{
               {/* Hero unit */}
               <div ref={this.FrontSegment} id='frontsegment'/>
               <FrontSegment classes={classes} handleClick={this.scrollToContent} />
-              <div ref={this.ProjectSegment}/>
+              <div ref={this.ProjectSegment} id='project'/>
               <ProjectSegment classes={classes}/>
             </main>
             {/* Footer */}
-            <div ref={this.ContactSegment}/>
+            <div ref={this.ContactSegment} id='profile'/>
             <ContactSegment classes={classes}/>
             <Footer classes={classes}/>
         </React.Fragment>
