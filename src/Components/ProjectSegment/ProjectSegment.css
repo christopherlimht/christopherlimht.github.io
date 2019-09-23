@@ -1,16 +1,24 @@
 
 .TitleContainer{
-    padding-top: calc(64px);
-    
+    padding-top: calc(84px); 
 }
 .ProjectSegment{
     min-Height:100vh;
     display:flex;
     align-items: center;
     flex-direction:column;
+    background-color:#212121;
 }
 .Title{
     padding:0 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #bdbdbd;
+    color:white !important;
+    font-family: 'IBM Plex Serif', serif !important;
+    font-weight: normal !important;
+}
+
+.CardButton{
+    color:black !important;
+    font-weight: normal !important;
 }

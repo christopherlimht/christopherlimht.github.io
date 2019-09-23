@@ -8,18 +8,20 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import Scrollchor from 'react-scrollchor';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
 const useStyles = makeStyles({
     list: {
       width: 250,
     },
     fullList: {
       width: 'auto',
-    },
+    },Scrollchor: { color:'red',textDecoration: 'none' }
 });
 
 export default function MobileMenuButton(props){
@@ -27,9 +29,6 @@ export default function MobileMenuButton(props){
     const [state, setState] = React.useState({
         left: false,
     });
-    function testMobileMenuButton(){
-        console.log("menu button pressed");
-    };
     function closeDrawer(side,open){
         toggleDrawer(side, open);
     }
@@ -40,10 +39,20 @@ export default function MobileMenuButton(props){
         setState({ ...state, [side]: open });
     };
     const sidebarItem = [
-      {id:"#frontsegment",name:"Home"},
-      {id:"#project",name:"Project"},
-      {id:"#profile",name:"Profile"}
+      {id:"#frontsegment",name:"Home",uid:'1'},
+      {id:"#project",name:"Project",uid:'2'},
+      {id:"#profile",name:"Profile",uid:'3'}
     ]
+    const iconRendering= (text) =>{
+      switch(text.name){
+        case 'Home':
+          return <HomeIcon />;
+        case 'Project':
+          return <InsertDriveFileIcon />;
+        case 'Profile':
+          return <PersonIcon />;
+      }
+    }
     const sideList = side => (
         <div
           className={classes.list}
@@ -53,21 +62,17 @@ export default function MobileMenuButton(props){
         >
           <List>
             {sidebarItem.map((text, index) => (
-            <Scrollchor to={text.id}>
-              <ListItem button key={index}  onClick={(closeDrawer('left', true))}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <Scrollchor className='url' to={text.id} key={text.uid} animate={{ offset: 0, duration: 300}}>
+              <ListItem>
+                <ListItemAvatar key={text.uid}  onClick={(closeDrawer('left', true))}>
+                  <Avatar>
+                    {iconRendering(text)}
+                  </Avatar>
+                </ListItemAvatar>
                 <ListItemText primary={text.name} />
               </ListItem>
+              <Divider variant="inset" component="li" />
             </Scrollchor>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
             ))}
           </List>
         </div>

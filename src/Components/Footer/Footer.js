@@ -1,11 +1,11 @@
 
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import './Footer.css';
 function Copyright() {
     return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Created using React and Material-UI, '}
-        {new Date().getFullYear()}
+      <Typography className="FooterText" align="center">
+        {'Created using React and Material-UI'}
         {'.'}
       </Typography>
     );

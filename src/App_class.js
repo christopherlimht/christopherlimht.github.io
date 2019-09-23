@@ -12,17 +12,16 @@ const useStyles = (theme) => ({
       marginRight: theme.spacing(2),
     },
     FrontSegment: {
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: '#121212',
       padding: theme.spacing(8, 0, 6),
       height: '100vh',
       alignItems: 'center',
       display:'flex'
     },
     ContactSegment:{
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: '#121212',
       minHeight: 'calc(100vh - 64px)',
       alignItems: 'center',
-      display:'flex'
     },
     heroButtons: {
       marginTop: theme.spacing(4),

@@ -23,10 +23,10 @@ function ProjectSegment(props){
             <Grid item xs={12} className='CardsContainer'>
                 <Container className={props.classes.cardGrid} maxWidth="lg">
                     {/* End hero unit */}
-                    <Grid container spacing={3}>
+                    <Grid container spacing={4}>
                         {cards.map(card => (
                         <Grid item key={card} xs={12} sm={6} md={3}>
-                            <Card className={props.classes.card}>
+                            <Card raised={true} className={props.classes.card}>
                             <CardMedia
                                 className={props.classes.cardMedia}
                                 image="https://source.unsplash.com/random"
@@ -34,17 +34,17 @@ function ProjectSegment(props){
                             />
                             <CardContent className={props.classes.cardContent}>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                Heading
+                                    Heading
                                 </Typography>
                                 <Typography>
-                                This is a media card. You can use this section to describe the content.
+                                    This is a media card. You can use this section to describe the content.
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small" color="primary">
+                                <Button size="small" className='CardButton'>
                                 View
                                 </Button>
-                                <Button size="small" color="primary">
+                                <Button size="small" className='CardButton'>
                                 Edit
                                 </Button>
                             </CardActions>

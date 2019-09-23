@@ -9,24 +9,22 @@ function FrontSegment(props){
     return(
         <div className={props.classes.FrontSegment}>
             <Container maxWidth="sm" className='FrontSegment'>
-                <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Album layout
+                <Typography variant="h2" align="left" className='FirstText' gutterBottom>
+                Christopher Lim
                 </Typography>
-                <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                Something short and leading about the collection below—its contents, the creator, etc.
-                Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-                entirely.
+                <Typography variant="h5" align="left" className="SecondaryText" paragraph>
+                     Welcome to my profile <br></br> Backend Developer
                 </Typography>
                 <div className={props.classes.heroButtons}>
-                    <Grid container spacing={2} justify="center">
+                    <Grid container spacing={2} justify="flex-start">
                         <Grid item>
-                        <Button variant="contained" color="primary" onClick={()=>props.handleClick(2)}>
-                            Main call to action
+                        <Button size="large" variant="outlined" className='buttons' onClick={()=>props.handleClick(2)}>
+                            Projects
                         </Button>
                         </Grid>
                         <Grid item>
-                        <Button variant="outlined" color="primary" onClick={()=>props.handleClick(3)}>
-                            Secondary action
+                        <Button size="large" variant="outlined" className='buttons' onClick={()=>props.handleClick(3)}>
+                            Profile
                         </Button>
                         </Grid>
                     </Grid>
