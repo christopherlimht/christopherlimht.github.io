@@ -8,9 +8,11 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import './ProjectSegment.css';
+var json =  require('./projectsFile.json');
 //const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
 const cards = [1, 2, 3,4];
 function ProjectSegment(props){
+    console.log(json);
     return(
         <Grid container spacing={0} className='ProjectSegment'>
             <Grid item className='TitleContainer'>
@@ -24,8 +26,8 @@ function ProjectSegment(props){
                 <Container className={props.classes.cardGrid} maxWidth="lg">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
-                        {cards.map(card => (
-                        <Grid item key={card} xs={12} sm={6} md={3}>
+                        {json.projects.map(card => (
+                        <Grid item key={card.projectID} xs={12} sm={6} md={3}>
                             <Card raised={true} className={props.classes.card}>
                             <CardMedia
                                 className={props.classes.cardMedia}
