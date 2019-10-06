@@ -2,10 +2,12 @@
     "projects":[{
         "projectID":1,
         "name": "sampleProject",
-        "url":"leiho"
+        "url":"leiho",
+        "image":"https://cdn.pixabay.com/photo/2019/02/06/16/32/architect-3979490_1280.jpg"
     },{
         "projectID":2,
         "name":"Project2",
-        "url":"wtf"
+        "url":"wtf",
+        "image":"https://image.shutterstock.com/image-photo/skilled-male-architect-making-research-600w-765534031.jpg"
     }]
 }

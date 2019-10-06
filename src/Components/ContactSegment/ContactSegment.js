@@ -15,12 +15,10 @@ function ContactSegment(props){
                     </Typography>
                 </Container>
             </Grid>
-            <Grid item xs={12} className='CardsContainer'>
-                <Container className={props.classes.cardGrid} maxWidth="lg">
-                   <Profile />
-                </Container>
-            </Grid>
         </Grid>
+        <Container className={props.classes.cardGrid} maxWidth="lg">
+            <Profile />
+        </Container>
         </div>
     )
 }

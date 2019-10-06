@@ -31,7 +31,7 @@ function ProjectSegment(props){
                             <Card raised={true} className={props.classes.card}>
                             <CardMedia
                                 className={props.classes.cardMedia}
-                                image="https://source.unsplash.com/random"
+                                image={card.image}
                                 title="Image title"
                             />
                             <CardContent className={props.classes.cardContent}>
