@@ -64,7 +64,6 @@ const SKILLS = [
     {type: "Angular", level: 40},
     {type: "React", level: 40},
     {type: "Python", level: 40},
-    {type: "Shell-scripting", level: 45},
 ];
 
 function AboutSection() {
@@ -91,12 +90,12 @@ function AboutSection() {
                                     <Grid item xs={12}>
                                         <div name="subContent" className={classes.subContent}>
                                             <p>
-                                                Christopher here, I am a developer based in Singapore.
-                                                I am currently working as a devops engineer at Singtel, where my job scope revolves around developing automated solutions, helping my clients improve their workflows.
+                                                Christopher here, I am a developer based in Singapore.<br/>
+                                                I am currently working as a devops engineer at Singtel, where my job scope revolves around developing automated solutions.
                                             </p>
                                             <p>
                                                 I am also a trained developer, having worked on a number of different projects which required knowledge in a wide range of languages, from developing microservices on NodeJS using javascript to developing chef inspec profiles using ruby.
-                                                Being a tech enthusiast, I would be spending my free time either on exploring new technologies such as 3D graphics or tinkering and setting up my own computer systems and home labs.
+                                                <br/>Being a tech enthusiast, I would be spending my free time either on exploring new technologies such as 3D graphics or tinkering and setting up my own computer systems and home labs.
                                             </p>
                                             <p>
                                                 Through this small portfolio website of mine, I hope to showcase my skills and interests through projects I have completed in my free time.
